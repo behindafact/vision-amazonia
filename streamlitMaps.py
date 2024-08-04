@@ -28,8 +28,8 @@ with open("proyecto.geojson",'r', encoding='utf-8') as f:
     gj = geojson.load(f)
 
 st.header('VISOR AMAZONIA')
-dfRestaurantes= pd.read_csv('googlemaps_comida china.csv')
-dfRestaurantes['review_count']=dfRestaurantes['review_count'].fillna(1)
+#dfRestaurantes= pd.read_csv('googlemaps_comida china.csv')
+##dfRestaurantes['review_count']=dfRestaurantes['review_count'].fillna(1)
 
 tab2,tab4=st.tabs(['Mapa deforesacion proyecto Guainia' ,'Datos'])
 with tab2:
@@ -48,6 +48,6 @@ with tab2:
     st.plotly_chart(fig,use_container_width=True)
     #st.dataframe(df)
 
-with tab4:
-    st.dataframe(dfRestaurantes,use_container_width=True)
+#with tab4:
+    #st.dataframe(dfRestaurantes,use_container_width=True)
 
