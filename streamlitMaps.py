@@ -29,11 +29,11 @@ with open("proyecto.geojson",'r', encoding='utf-8') as f:
 with open("cuencas_pred.geojson",'r', encoding='utf-8') as f:
     gj2 = geojson.load(f)
 
-st.header('VISOR AMAZONIA')
+st.header('AMAZON AND WATERSHEDS HAZARD') 
 #dfRestaurantes= pd.read_csv('googlemaps_comida china.csv')
 ##dfRestaurantes['review_count']=dfRestaurantes['review_count'].fillna(1)
 
-tab2,tab4=st.tabs(['Mapa deforesacion proyecto Guainia' ,'Random Forestt Classfier for Watershed'])
+tab2,tab4=st.tabs(['Mapa deforesacion proyecto Guainia' ,'Random Forest Classfier for Watershed Hazard'])
 with tab2:
     #df = px.data.gapminder().query("year==2007")    
     fig = px.choropleth_mapbox(data_frame=df,geojson=gj,
